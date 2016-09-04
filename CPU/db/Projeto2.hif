@@ -1,0 +1,258 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1040
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+BCDecode
+# storage
+db|Projeto2.(1).cnf
+db|Projeto2.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+bcdecode.v
+2043a4d45c9453cec03a3f233491e241
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+BCDecode:inst4
+BCDecode:inst5
+BCDecode:inst8
+}
+# macro_sequence
+
+# end
+# entity
+registrador
+# storage
+db|Projeto2.(2).cnf
+db|Projeto2.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+registrador.v
+b1d1dd2e367d5c8ec2ddfc013633d1b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+A
+00
+PARAMETER_UNSIGNED_BIN
+USR
+B
+01
+PARAMETER_UNSIGNED_BIN
+USR
+C
+10
+PARAMETER_UNSIGNED_BIN
+USR
+}
+# hierarchies {
+registrador:inst
+}
+# macro_sequence
+
+# end
+# entity
+registrador_Ty_Tz
+# storage
+db|Projeto2.(5).cnf
+db|Projeto2.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+registrador_ty_tz.v
+631941df1b3351678846519df46938cc
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+A
+00
+PARAMETER_UNSIGNED_BIN
+USR
+B
+01
+PARAMETER_UNSIGNED_BIN
+USR
+C
+10
+PARAMETER_UNSIGNED_BIN
+USR
+}
+# hierarchies {
+registrador_Ty_Tz:inst7
+registrador_Ty_Tz:inst6
+}
+# macro_sequence
+
+# end
+# entity
+UC
+# storage
+db|Projeto2.(0).cnf
+db|Projeto2.(0).cnf
+# case_insensitive
+# source_file
+uc.bdf
+e6e2699b31cd4b79f62480138a3defc7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+UC2:inst9|UC:inst
+}
+# macro_sequence
+
+# end
+# entity
+UC2
+# storage
+db|Projeto2.(4).cnf
+db|Projeto2.(4).cnf
+# case_insensitive
+# source_file
+uc2.bdf
+86ad70f0ec545fbfdee0ac585c2a3a75
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+UC2:inst9
+}
+# macro_sequence
+
+# end
+# entity
+Projeto2
+# storage
+db|Projeto2.(3).cnf
+db|Projeto2.(3).cnf
+# case_insensitive
+# source_file
+projeto2.bdf
+23d1c8ad9ce4b4a9030ec79d42e4d4a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ULA
+# storage
+db|Projeto2.(6).cnf
+db|Projeto2.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ula.v
+606786abf67b7fdc45846ea0a65c8d55
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ULA:inst3
+}
+# macro_sequence
+
+# end
+# complete
+

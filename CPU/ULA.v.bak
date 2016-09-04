@@ -1,0 +1,58 @@
+module ULA(input[5:0] a, input[5:0] b, input[1:0] Tula, output reg[5:0] F);
+
+reg[5:0] in1;
+reg[5:0] in2;
+initial in1 = a;
+initial in2 = b;
+parameter  n = 1'b1;
+
+always @(*)
+begin
+		case(Tula)
+	
+			2'b00:
+			begin
+				if(in1[5] == 0 | in2[5] == 0)
+					begin
+						F = in1 + in2;				
+					end
+				else
+					begin
+						if(in1[5] == n)
+						begin
+							in1 = ~in1;
+							in1 = in1+n;
+						end
+						if(in2[5] == n)
+						begin
+							in2 = ~in2;
+							in2 = in2+n;
+						end
+						F = in1 + in2;
+					end
+			end
+			
+			2'b01:
+			begin
+				if(in1[5] == 0 | in2[5] == 0)
+					F = in1 - in2;									
+				else
+					begin
+						if(in1[5] == n)
+						begin
+							in1 = ~in1;
+							in1 = in1+n;
+						end
+						if(in2[5] == n)
+						begin
+							in2 = ~in2;
+							in2 = in2+n;
+						end
+					F = in1 - in2;
+					end
+			end
+			
+		endcase			
+end
+
+endmodule

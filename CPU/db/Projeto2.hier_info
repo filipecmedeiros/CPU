@@ -1,0 +1,294 @@
+|Projeto2
+dezena7 <= BCDecode:inst4.dezenas[7]
+Switch[0] => registrador:inst.in[0]
+Switch[1] => registrador:inst.in[1]
+Switch[2] => registrador:inst.in[2]
+Switch[3] => registrador:inst.in[3]
+Switch[4] => registrador:inst.in[4]
+New_Instrution => UC2:inst9.New_Instruction
+I0 => UC2:inst9.I0
+I1 => UC2:inst9.I1
+I2 => UC2:inst9.I2
+dezena6 <= BCDecode:inst4.dezenas[6]
+dezena5 <= BCDecode:inst4.dezenas[5]
+dezena4 <= BCDecode:inst4.dezenas[4]
+dezena3 <= BCDecode:inst4.dezenas[3]
+dezena2 <= BCDecode:inst4.dezenas[2]
+dezena1 <= BCDecode:inst4.dezenas[1]
+dezena0 <= BCDecode:inst4.dezenas[0]
+dezena47 <= BCDecode:inst5.dezenas[7]
+dezena46 <= BCDecode:inst5.dezenas[6]
+dezena45 <= BCDecode:inst5.dezenas[5]
+dezena44 <= BCDecode:inst5.dezenas[4]
+dezena43 <= BCDecode:inst5.dezenas[3]
+dezena42 <= BCDecode:inst5.dezenas[2]
+dezena41 <= BCDecode:inst5.dezenas[1]
+dezena40 <= BCDecode:inst5.dezenas[0]
+dezena57 <= BCDecode:inst8.dezenas[7]
+dezena56 <= BCDecode:inst8.dezenas[6]
+dezena55 <= BCDecode:inst8.dezenas[5]
+dezena54 <= BCDecode:inst8.dezenas[4]
+dezena53 <= BCDecode:inst8.dezenas[3]
+dezena52 <= BCDecode:inst8.dezenas[2]
+dezena51 <= BCDecode:inst8.dezenas[1]
+dezena50 <= BCDecode:inst8.dezenas[0]
+unidade7 <= BCDecode:inst4.unidades[7]
+unidade6 <= BCDecode:inst4.unidades[6]
+unidade5 <= BCDecode:inst4.unidades[5]
+unidade4 <= BCDecode:inst4.unidades[4]
+unidade3 <= BCDecode:inst4.unidades[3]
+unidade2 <= BCDecode:inst4.unidades[2]
+unidade1 <= BCDecode:inst4.unidades[1]
+unidade0 <= BCDecode:inst4.unidades[0]
+unidade37 <= BCDecode:inst5.unidades[7]
+unidade36 <= BCDecode:inst5.unidades[6]
+unidade35 <= BCDecode:inst5.unidades[5]
+unidade34 <= BCDecode:inst5.unidades[4]
+unidade33 <= BCDecode:inst5.unidades[3]
+unidade32 <= BCDecode:inst5.unidades[2]
+unidade31 <= BCDecode:inst5.unidades[1]
+unidade30 <= BCDecode:inst5.unidades[0]
+unidade67 <= BCDecode:inst8.unidades[7]
+unidade66 <= BCDecode:inst8.unidades[6]
+unidade65 <= BCDecode:inst8.unidades[5]
+unidade64 <= BCDecode:inst8.unidades[4]
+unidade63 <= BCDecode:inst8.unidades[3]
+unidade62 <= BCDecode:inst8.unidades[2]
+unidade61 <= BCDecode:inst8.unidades[1]
+unidade60 <= BCDecode:inst8.unidades[0]
+
+
+|Projeto2|BCDecode:inst4
+BCDinpt[0] => Decoder0.IN5
+BCDinpt[0] => Ram0.RADDR
+BCDinpt[1] => Decoder0.IN4
+BCDinpt[1] => Ram0.RADDR1
+BCDinpt[2] => Decoder0.IN3
+BCDinpt[2] => Ram0.RADDR2
+BCDinpt[3] => Decoder0.IN2
+BCDinpt[3] => Ram0.RADDR3
+BCDinpt[4] => Decoder0.IN1
+BCDinpt[4] => Ram0.RADDR4
+BCDinpt[5] => Decoder0.IN0
+BCDinpt[5] => Ram0.RADDR5
+unidades[0] <= Ram0.DATAOUT
+unidades[1] <= Ram0.DATAOUT1
+unidades[2] <= Ram0.DATAOUT2
+unidades[3] <= Ram0.DATAOUT3
+unidades[4] <= Ram0.DATAOUT4
+unidades[5] <= Ram0.DATAOUT5
+unidades[6] <= Ram0.DATAOUT6
+unidades[7] <= Ram0.DATAOUT7
+dezenas[0] <= <VCC>
+dezenas[1] <= dezenas[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[2] <= dezenas[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[3] <= dezenas[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[4] <= dezenas[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[5] <= dezenas[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[6] <= <GND>
+dezenas[7] <= dezenas[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto2|registrador:inst
+in[0] => Selector0.IN3
+in[1] => Selector1.IN3
+in[2] => Selector2.IN3
+in[3] => Selector3.IN3
+in[4] => Selector4.IN3
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= <GND>
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+T[0] => Equal0.IN3
+T[0] => Equal1.IN3
+T[1] => Equal0.IN2
+T[1] => Equal1.IN2
+
+
+|Projeto2|UC2:inst9
+Tula0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+New_Instruction => inst2.IN0
+I0 => UC:inst.I0
+I1 => UC:inst.I1
+I2 => UC:inst.I2
+Tula1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Tx0 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Tx1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Ty0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Ty1 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Tz0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Tz1 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto2|UC2:inst9|UC:inst
+Tula0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+I1 => inst11.IN0
+I1 => Tx1.DATAIN
+I1 => Ty0.DATAIN
+I1 => inst18.IN0
+I0 => inst1.IN1
+I0 => inst15.IN0
+I0 => inst.IN0
+I0 => inst14.IN0
+I0 => inst17.IN0
+I2 => inst12.IN0
+I2 => inst14.IN2
+I2 => inst16.IN2
+I2 => inst17.IN1
+Tula1 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+Tx0 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Tx1 <= I1.DB_MAX_OUTPUT_PORT_TYPE
+Ty0 <= I1.DB_MAX_OUTPUT_PORT_TYPE
+Ty1 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Tz0 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+Tz1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto2|BCDecode:inst5
+BCDinpt[0] => Decoder0.IN5
+BCDinpt[0] => Ram0.RADDR
+BCDinpt[1] => Decoder0.IN4
+BCDinpt[1] => Ram0.RADDR1
+BCDinpt[2] => Decoder0.IN3
+BCDinpt[2] => Ram0.RADDR2
+BCDinpt[3] => Decoder0.IN2
+BCDinpt[3] => Ram0.RADDR3
+BCDinpt[4] => Decoder0.IN1
+BCDinpt[4] => Ram0.RADDR4
+BCDinpt[5] => Decoder0.IN0
+BCDinpt[5] => Ram0.RADDR5
+unidades[0] <= Ram0.DATAOUT
+unidades[1] <= Ram0.DATAOUT1
+unidades[2] <= Ram0.DATAOUT2
+unidades[3] <= Ram0.DATAOUT3
+unidades[4] <= Ram0.DATAOUT4
+unidades[5] <= Ram0.DATAOUT5
+unidades[6] <= Ram0.DATAOUT6
+unidades[7] <= Ram0.DATAOUT7
+dezenas[0] <= <VCC>
+dezenas[1] <= dezenas[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[2] <= dezenas[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[3] <= dezenas[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[4] <= dezenas[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[5] <= dezenas[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[6] <= <GND>
+dezenas[7] <= dezenas[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto2|registrador_Ty_Tz:inst7
+in[0] => Mux0.IN3
+in[1] => Mux1.IN3
+in[2] => Mux2.IN3
+in[3] => Mux3.IN3
+in[4] => Mux4.IN3
+in[5] => Mux5.IN3
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+T[0] => Mux0.IN5
+T[0] => Mux1.IN5
+T[0] => Mux2.IN5
+T[0] => Mux3.IN5
+T[0] => Mux4.IN5
+T[0] => Mux5.IN5
+T[0] => Mux6.IN5
+T[1] => Mux0.IN4
+T[1] => Mux1.IN4
+T[1] => Mux2.IN4
+T[1] => Mux3.IN4
+T[1] => Mux4.IN4
+T[1] => Mux5.IN4
+T[1] => Mux6.IN4
+
+
+|Projeto2|ULA:inst3
+a[0] => ~NO_FANOUT~
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+a[4] => ~NO_FANOUT~
+a[5] => ~NO_FANOUT~
+b[0] => ~NO_FANOUT~
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+b[4] => ~NO_FANOUT~
+b[5] => ~NO_FANOUT~
+Tula[0] => Equal0.IN3
+Tula[0] => Equal1.IN3
+Tula[1] => Equal0.IN2
+Tula[1] => Equal1.IN2
+F[0] <= F[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= F[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= F[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= F[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= F[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= F[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto2|BCDecode:inst8
+BCDinpt[0] => Decoder0.IN5
+BCDinpt[0] => Ram0.RADDR
+BCDinpt[1] => Decoder0.IN4
+BCDinpt[1] => Ram0.RADDR1
+BCDinpt[2] => Decoder0.IN3
+BCDinpt[2] => Ram0.RADDR2
+BCDinpt[3] => Decoder0.IN2
+BCDinpt[3] => Ram0.RADDR3
+BCDinpt[4] => Decoder0.IN1
+BCDinpt[4] => Ram0.RADDR4
+BCDinpt[5] => Decoder0.IN0
+BCDinpt[5] => Ram0.RADDR5
+unidades[0] <= Ram0.DATAOUT
+unidades[1] <= Ram0.DATAOUT1
+unidades[2] <= Ram0.DATAOUT2
+unidades[3] <= Ram0.DATAOUT3
+unidades[4] <= Ram0.DATAOUT4
+unidades[5] <= Ram0.DATAOUT5
+unidades[6] <= Ram0.DATAOUT6
+unidades[7] <= Ram0.DATAOUT7
+dezenas[0] <= <VCC>
+dezenas[1] <= dezenas[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[2] <= dezenas[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[3] <= dezenas[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[4] <= dezenas[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[5] <= dezenas[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dezenas[6] <= <GND>
+dezenas[7] <= dezenas[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto2|registrador_Ty_Tz:inst6
+in[0] => Mux0.IN3
+in[1] => Mux1.IN3
+in[2] => Mux2.IN3
+in[3] => Mux3.IN3
+in[4] => Mux4.IN3
+in[5] => Mux5.IN3
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+T[0] => Mux0.IN5
+T[0] => Mux1.IN5
+T[0] => Mux2.IN5
+T[0] => Mux3.IN5
+T[0] => Mux4.IN5
+T[0] => Mux5.IN5
+T[0] => Mux6.IN5
+T[1] => Mux0.IN4
+T[1] => Mux1.IN4
+T[1] => Mux2.IN4
+T[1] => Mux3.IN4
+T[1] => Mux4.IN4
+T[1] => Mux5.IN4
+T[1] => Mux6.IN4
+
+
